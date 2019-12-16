@@ -33,9 +33,7 @@ describe Account do
     it 'should return the relevant informaton - formatted' do
       subject.deposit(1000)
       subject.withdraw(500)
-      expect(subject.statement).to include("date || credit || debit || balance")
-      expect(subject.statement).to include("#{Time.now.strftime("%d/%m/%Y")} || || 500.00 || 500.00")
-      expect(subject.statement).to include("#{Time.now.strftime("%d/%m/%Y")} || 1000.00 || || 1000.00")
+      expect(subject.statement).to eq("date || credit || debit || balance" + "\n" + "#{Time.now.strftime("%d/%m/%Y")} || || 500.00 || 500.00" + "\n" + "#{Time.now.strftime("%d/%m/%Y")} || 1000.00 || || 1000.00" + "\n")
     end
   end
 

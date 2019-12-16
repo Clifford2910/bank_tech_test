@@ -1,4 +1,5 @@
 class Account
+  DEFAULT_MIN_BALANCE = 0
 
   attr_reader :balance, :activity
 
