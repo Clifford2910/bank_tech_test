@@ -15,5 +15,15 @@ describe Account do
       subject.deposit(1000.00)
       expect(subject.balance).to eq(1000.00)
     end
+  end
+
+  context 'withdraw' do
+    it 'should be able to withdraw and subtract from the existing balance' do
+      expect(subject.balance).to eq(0)
+      subject.deposit(1000.00)
+      subject.withdraw(500.00)
+      expect(subject.balance).to eq(500.00)
+    end
+  end
 
 end
