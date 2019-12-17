@@ -26,17 +26,21 @@ date       || credit || debit   || balance
 10/01/2012 || 1000.00||         || 1000.00
 ```
 
+### My Code:
+* My approach was to use TDD to guide my code and refactor when i began to repeat myself. I also used rubocop and simplecov to ensure good code quality.
+* My plan for structure was to have two classes, one for handling the money logic and the other for handling and formatting the output data.
+
 ## <a name="Install">Installation</a>
 * To clone the repo
 ```shell
-$ git clone https://github.com/adrianeyre/bank-tech-test
-$ cd bank-tech-test
+$ git clone https://github.com/Clifford2910/bank_tech_test.git
+$ cd bank_tech_test
 $ bundle
 ```
 
 ## <a name="Rspec">Rspec Tests</a>
 ```shell
-$ cd bank-tech-test
+$ cd bank_tech_test
 $ rspec
 ```
 
@@ -46,6 +50,28 @@ irb
 $ require './lib/account.rb'
 $ account = Account.new
 $ account.deposit(1000)
+$ account.deposit(1000)
 $ account.withdraw(500)
 $ puts account.statement
+```
+* Output showing what my app looks like
+```
+Makerss-MacBook-Pro-8:bank_tech_test student$ irb
+2.6.3 :001 > require './lib/account.rb'
+ => true
+2.6.3 :002 > account = Account.new
+ => #<Account:0x00007f9297963148 @balance=0, @display=#<Display:0x00007f9297963120 @activity=[]>>
+2.6.3 :003 > account.deposit(1000)
+ => ["17/12/2019 || 1000.00 || || 1000.00"]
+2.6.3 :004 > account.deposit(1000)
+ => ["17/12/2019 || 1000.00 || || 2000.00", "17/12/2019 || 1000.00 || || 1000.00"]
+2.6.3 :005 > account.withdraw(500)
+ => ["17/12/2019 || || 500.00 || 1500.00", "17/12/2019 || 1000.00 || || 2000.00", "17/12/2019 || 1000.00 || || 1000.00"]
+2.6.3 :006 > puts account.statement
+date || credit || debit || balance
+17/12/2019 || || 500.00 || 1500.00
+17/12/2019 || 1000.00 || || 2000.00
+17/12/2019 || 1000.00 || || 1000.00
+ => nil
+2.6.3 :007 >
 ```
