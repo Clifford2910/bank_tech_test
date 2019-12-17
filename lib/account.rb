@@ -1,10 +1,10 @@
 class Account
-  DEFAULT_MIN_BALANCE = 0
+  STARTING_BALANCE = 0
 
   attr_reader :balance, :activity
 
-  def initialize
-    @balance = 0
+  def initialize(balance = STARTING_BALANCE)
+    @balance = balance
     @activity = []
   end
 
