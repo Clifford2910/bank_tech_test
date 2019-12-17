@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-17T15:24:14+00:00">2019-12-17T15:24:14+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2019-12-17T16:36:46+00:00">2019-12-17T16:36:46+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.42
+         1.45
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>4</b> files in total.
-    <b>52</b> relevant lines. 
-    <span class="green"><b>52</b> lines covered</span> and
+    <b>50</b> relevant lines. 
+    <span class="green"><b>50</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,17 +53,17 @@
       <tr>
         <td class="strong"><a href="#9a1e89ce953a64c3491b37462c7d2a7b6eeab50e" class="src_link" title="lib/account.rb">lib/account.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>31</td>
-        <td>17</td>
-        <td>17</td>
+        <td>26</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>1.6</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#785c6b707ae42b1ad4564b45aa957701f0ff6db9" class="src_link" title="lib/display.rb">lib/display.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
+        <td>11</td>
         <td>6</td>
         <td>6</td>
         <td>0</td>
@@ -73,7 +73,7 @@
       <tr>
         <td class="strong"><a href="#e56885e1eb345387c9368e95b9bd8db3f991e5f3" class="src_link" title="spec/account_spec.rb">spec/account_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
+        <td>29</td>
         <td>18</td>
         <td>18</td>
         <td>0</td>
@@ -83,7 +83,7 @@
       <tr>
         <td class="strong"><a href="#417d4ea7cd7b622edd85313b33d5b7284b50bb30" class="src_link" title="spec/display_spec.rb">spec/display_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>19</td>
+        <td>18</td>
         <td>11</td>
         <td>11</td>
         <td>0</td>
@@ -111,8 +111,8 @@
     <h3>lib/account.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>17</b> relevant lines. 
-      <span class="green"><b>17</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -153,7 +153,7 @@
         <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
-          <code class="ruby">  attr_reader :balance, :statement</code>
+          <code class="ruby">  attr_reader :balance</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -207,7 +207,7 @@
         <li class="covered" data-hits="3" data-linenumber="15">
           <span class="hits">3</span>
           
-          <code class="ruby">    @display.activity.unshift(&quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || #{amount}.00 || || #{@balance}.00&quot;)</code>
+          <code class="ruby">    @display.activity.unshift(&quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || #{amount}.00 || || #{@balance}.00&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -237,7 +237,7 @@
         <li class="covered" data-hits="2" data-linenumber="20">
           <span class="hits">2</span>
           
-          <code class="ruby">    @display.activity.unshift(&quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || || #{amount}.00 || #{@balance}.00&quot;)</code>
+          <code class="ruby">    @display.activity.unshift(&quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || || #{amount}.00 || #{@balance}.00&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
@@ -255,13 +255,13 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  def balance</code>
+          <code class="ruby">  def statement</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="24">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
           
-          <code class="ruby">    @balance</code>
+          <code class="ruby">    return @display.show</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
@@ -271,36 +271,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="27">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def statement</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="28">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    return @display.show</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">end</code>
@@ -331,73 +301,61 @@
           <code class="ruby">class Display</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="2">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
           <code class="ruby">  attr_accessor :activity</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
           <code class="ruby">  def initialize</code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="6">
+        <li class="covered" data-hits="5" data-linenumber="5">
           <span class="hits">5</span>
           
           <code class="ruby">    @activity = []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="10">
+        <li class="covered" data-hits="3" data-linenumber="9">
           <span class="hits">3</span>
           
-          <code class="ruby">    return &quot;date || credit || debit || balance&quot; + &quot;\n&quot; + &quot;#{@activity.each {|x|}.join(&quot;\n&quot;)}&quot; + &quot;\n&quot;</code>
+          <code class="ruby">    return &#39;date || credit || debit || balance&#39; + &quot;\n&quot; + &quot;#{@activity.each { |x| }.join(&quot;\n&quot;)}&quot; + &quot;\n&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">end</code>
@@ -449,7 +407,7 @@
         <li class="covered" data-hits="4" data-linenumber="5">
           <span class="hits">4</span>
           
-          <code class="ruby">  subject(:account) {described_class.new}</code>
+          <code class="ruby">  subject(:account) { described_class.new }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -575,7 +533,7 @@
         <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(subject.statement).to eq(&quot;date || credit || debit || balance&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || || 500.00 || 500.00&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot;)</code>
+          <code class="ruby">      expect(subject.statement).to eq(&#39;date || credit || debit || balance&#39; + &quot;\n&quot; + &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || || 500.00 || 500.00&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
@@ -591,12 +549,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
           
           
           <code class="ruby">end</code>
@@ -648,7 +600,7 @@
         <li class="covered" data-hits="3" data-linenumber="5">
           <span class="hits">3</span>
           
-          <code class="ruby">  subject(:display) {described_class.new}</code>
+          <code class="ruby">  subject(:display) { described_class.new }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
@@ -672,13 +624,13 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">      subject.activity = [&quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || 1000.00 || || 1000.00&quot;]</code>
+          <code class="ruby">      subject.activity = [&quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 || || 1000.00&quot;]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(subject.show).to eq(&quot;date || credit || debit || balance&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot;)</code>
+          <code class="ruby">      expect(subject.show).to eq(&#39;date || credit || debit || balance&#39; + &quot;\n&quot; + &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
@@ -702,13 +654,13 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">      subject.activity = [&quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || 1000.00 || || 1000.00&quot;, &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || || 500.00 || 500.00&quot;]</code>
+          <code class="ruby">      subject.activity = [&quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 || || 1000.00&quot;, &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || || 500.00 || 500.00&quot;]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(subject.show).to eq(&quot;date || credit || debit || balance&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&quot;%d/%m/%Y&quot;)} || || 500.00 || 500.00&quot; + &quot;\n&quot;)</code>
+          <code class="ruby">      expect(subject.show).to eq(&#39;date || credit || debit || balance&#39; + &quot;\n&quot; + &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || 1000.00 || || 1000.00&quot; + &quot;\n&quot; + &quot;#{Time.now.strftime(&#39;%d/%m/%Y&#39;)} || || 500.00 || 500.00&quot; + &quot;\n&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
@@ -724,12 +676,6 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby">end</code>

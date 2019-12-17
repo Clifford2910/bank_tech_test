@@ -1,5 +1,4 @@
 class Display
-
   attr_accessor :activity
 
   def initialize
@@ -7,7 +6,6 @@ class Display
   end
 
   def show
-    return "date || credit || debit || balance" + "\n" + "#{@activity.each {|x|}.join("\n")}" + "\n"
+    return 'date || credit || debit || balance' + "\n" + "#{@activity.each { |x| }.join("\n")}" + "\n"
   end
-
 end
