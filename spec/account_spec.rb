@@ -1,4 +1,5 @@
 require 'account'
+require 'display'
 
 describe Account do
   subject(:account) {described_class.new}
@@ -8,11 +9,6 @@ describe Account do
       subject.deposit(1000)
       expect(subject.balance).to eq(1000)
     end
-
-    it 'should keep a log of the details when a deposit is made' do
-      subject.deposit(1000)
-      expect(subject.activity).to eq(["#{Time.now.strftime("%d/%m/%Y")} || 1000.00 || || 1000.00"])
-    end
   end
 
   context 'withdraw' do
@@ -20,12 +16,6 @@ describe Account do
       subject.deposit(1000)
       subject.withdraw(500)
       expect(subject.balance).to eq(500)
-    end
-
-    it 'should keep a log of the date when a deposit and withdrawal is made' do
-      subject.deposit(1000)
-      subject.withdraw(500)
-      expect(subject.activity).to eq(["#{Time.now.strftime("%d/%m/%Y")} || || 500.00 || 500.00", "#{Time.now.strftime("%d/%m/%Y")} || 1000.00 || || 1000.00"])
     end
   end
 

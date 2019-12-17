@@ -1,25 +1,31 @@
+require_relative 'display'
+
 class Account
   STARTING_BALANCE = 0
 
-  attr_reader :balance, :activity
+  attr_reader :balance, :statement
 
-  def initialize(balance = STARTING_BALANCE)
+  def initialize(balance = STARTING_BALANCE, display = Display.new)
     @balance = balance
-    @activity = []
+    @display = display
   end
 
   def deposit(amount)
     @balance += amount
-    @activity.unshift("#{Time.now.strftime("%d/%m/%Y")} || #{amount}.00 || || #{@balance}.00")
+    @display.activity.unshift("#{Time.now.strftime("%d/%m/%Y")} || #{amount}.00 || || #{@balance}.00")
   end
 
   def withdraw(amount)
     @balance -= amount
-    @activity.unshift("#{Time.now.strftime("%d/%m/%Y")} || || #{amount}.00 || #{@balance}.00")
+    @display.activity.unshift("#{Time.now.strftime("%d/%m/%Y")} || || #{amount}.00 || #{@balance}.00")
+  end
+
+  def balance
+    @balance
   end
 
   def statement
-    return "date || credit || debit || balance" + "\n" + "#{@activity.each {|x|}.join("\n")}" + "\n"
+    return @display.show
   end
 
 end
