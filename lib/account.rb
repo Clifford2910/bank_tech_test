@@ -12,15 +12,15 @@ class Account
 
   def deposit(amount)
     @balance += amount
-    @display.activity.unshift("#{Time.now.strftime('%d/%m/%Y')} || #{amount}.00 || || #{@balance}.00")
+    @display.prepend("#{Time.now.strftime('%d/%m/%Y')} || #{amount}.00 || || #{@balance}.00")
   end
 
   def withdraw(amount)
     @balance -= amount
-    @display.activity.unshift("#{Time.now.strftime('%d/%m/%Y')} || || #{amount}.00 || #{@balance}.00")
+    @display.prepend("#{Time.now.strftime('%d/%m/%Y')} || || #{amount}.00 || #{@balance}.00")
   end
 
   def statement
-    return @display.show
+    @display.show
   end
 end
